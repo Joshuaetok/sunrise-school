@@ -772,15 +772,50 @@ ul {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+@media (hover: none) {
+  .card:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
 }
 
 .card-cream {
   background-color: var(--bg-cream);
+}
+
+/* Contact Info Cards Stack */
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-cards-stack > .card {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.contact-cards-stack > .card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@supports (gap: 20px) {
+  .contact-cards-stack > .card:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .icon-box {
@@ -1169,6 +1204,18 @@ ul {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
+  min-width: 0;
+}
+
+.check-list li span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.check-list li a,
+.card-text a {
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .check-list li svg {
@@ -1568,9 +1615,26 @@ textarea.form-control {
     padding: 64px 0;
   }
 
+  .grid-3,
   .grid-2 {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .split-2col {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  .split-2col > * {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .card,
+  .form-card {
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .stats-cards-row {
@@ -1602,9 +1666,30 @@ textarea.form-control {
 
   .grid-4,
   .grid-3,
+  .grid-2,
   .beyond-row-card,
   .beyond-photos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  .card-top-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .card-top-between .role-label {
+    margin-bottom: 0;
+  }
+
+  .check-list li span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    width: 100%;
   }
 
   .beyond-photo-box {
@@ -1614,6 +1699,8 @@ textarea.form-control {
   .card,
   .form-card {
     padding: 22px 18px !important;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .photo-card-body {
