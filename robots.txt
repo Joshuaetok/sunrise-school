@@ -1,0 +1,7 @@
+# Seeds of Knowledge Intl School
+# https://seedsofknowledgeschool.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://seedsofknowledgeschool.com/sitemap.xml

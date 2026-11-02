@@ -1,2 +1,6 @@
 /*.pdf
 .DS_Store
+screenshots/
+site-deploy.zip
+core
+*.log
