@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (statusBox) {
           statusBox.style.display = 'block';
           statusBox.innerHTML =
-            '<strong>Thank you!</strong> Your submission has been received by the Sunrise Group of Schools Admissions & Administration team. We will contact you within 24 hours.';
+            '<strong>Thank you!</strong> Your submission has been received by the Seeds of Knowledge Intl School Admissions & Administration team. We will contact you within 24 hours.';
         }
         form.reset();
         if (submitBtn) {
