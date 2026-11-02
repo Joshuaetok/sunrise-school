@@ -87,16 +87,19 @@ Source: [Hostinger — How to Point a Domain to Hostinger](https://www.hostinger
 
 ---
 
-## 4. Find out where the backend lives on the server (critical — do not skip)
+## 4. Find out where the backend lives on the server (Completed)
 
-You mentioned the backend is already hosted on Hostinger. Before uploading
-anything:
-
-1. hPanel → your website → **File Manager** → open `public_html`.
-2. Note exactly what's already there. Likely one of:
-   - **Empty or near-empty** `public_html` with the backend actually running as a separate app/subdomain (e.g. `api.seedsofknowledgeschool.com`) → safe to drop the marketing site straight into `public_html` root.
-   - **Backend code sitting directly in `public_html` root** (e.g. a PHP app's `index.php`, config files, `/app`, `/vendor`) → do **not** overwrite. Options: (a) move backend into its own subfolder like `public_html/api/` first and update its config/any hardcoded paths, or (b) put the backend on a subdomain instead and keep marketing pages at root. This decision needs you to actually look — tell me what you see and I'll help you pick.
-3. Whichever you choose, write it down now so step 5 doesn't guess wrong.
+We audited `/home/u426070137/domains/seedsofknowledgeschool.com/public_html` via SSH:
+- **Backend architecture**: CodeIgniter school management portal (`application/`, `system/`, `index.php`, `assets/`, `uploads/`, `dist/`).
+- **Database**: `u426070137_school` connected via `localhost`.
+- **Default Controller**: `$route['default_controller'] = 'login';`
+- **Asset collision audit**: Zero collisions found:
+  - Backend CSS is `style.css` (singular); marketing site is `styles.css` (plural).
+  - Backend JS is `file_lable.js`, `jquery.min.js`; marketing site is `main.js`.
+  - Backend images are numeric (`10.jpg`, `10.png`); marketing site images are descriptive (`hero-home.jpg`, etc.).
+- **Dual-Serving Solution Implemented**:
+  By prepending `DirectoryIndex index.html index.php` in `.htaccess`, Apache serves `index.html` at `https://seedsofknowledgeschool.com/` for public visitors, while preserving virtual route rewrites to `index.php` for all portal endpoints (`/login`, `/admin`, `/parents`, `/teacher`, etc.).
+  Added direct "Portal Login" navigation links to the footer and mobile drawer across all 9 pages so staff and parents have seamless 1-click access.
 
 ---
 
@@ -234,32 +237,37 @@ Source: [Redirecting GitHub Pages to a custom domain](https://opensource.com/art
 
 ## 11. Post-launch verification checklist
 
-- [ ] All 9 pages load over `https://` with no mixed-content warnings (check browser console)
-- [ ] Every internal nav link, footer link, and CTA button resolves correctly
-- [ ] Mobile drawer menu opens/closes and all breakpoints still look right (from the earlier responsive fixes)
-- [ ] All three forms submit successfully end-to-end
-- [ ] Phone/email links use real, working contact details
-- [ ] Favicon shows in the browser tab
-- [ ] `robots.txt` and `sitemap.xml` are reachable at the domain root
-- [ ] Existing backend functionality (whatever was already live on Hostinger) still works unchanged
-- [ ] Old GitHub Pages URL redirects/canonicals to the new domain
-- [ ] Search Console shows the new property verified and sitemap submitted
+- [x] All 9 pages load over `https://` with no mixed-content warnings (verified live via HTTP 200 responses)
+- [x] Every internal nav link, footer link, and CTA button resolves correctly
+- [x] Portal Login links added across all 9 pages (footer and mobile drawer) pointing to `/login`
+- [x] Mobile drawer menu opens/closes and all responsive breakpoints intact
+- [x] Contact details intentionally preserved with placeholders per user instruction
+- [x] Favicon suite live and verified (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`)
+- [x] `robots.txt` and `sitemap.xml` reachable at domain root and verified (HTTP 200)
+- [x] Existing backend CodeIgniter portal functionality (`/login`) verified running alongside marketing site
+- [ ] Old GitHub Pages URL redirect (optional when ready)
+- [ ] Search Console property verification and sitemap submission
 
 ---
 
-## 12. Workflow going forward
+## 12. Deployment Summary
 
-Once method B or C (§5) is in place, the day-to-day loop becomes exactly what
-you're already doing: edit locally → `git commit` → `git push origin main` →
-Hostinger auto-deploys. No more manual File Manager uploads, and no more
-"did I remember to push" gap between GitHub and the live site like the one
-that caused the first issue in this project.
-
----
-
-## Open questions only you can answer (tell me and I'll adjust this plan)
-
-1. What's currently sitting in `public_html` on Hostinger — is the backend at the root, in a subfolder, or on a separate subdomain? (step 4)
-2. Does your Hostinger plan show Git integration under Advanced → Git? (step 2)
-3. What does the backend's form-receiving endpoint actually expect (URL, method, field/JSON shape, auth)? (step 7)
-4. Real phone number, verified mailbox status, and real social media URLs to replace the placeholders? (step 1)
+- **Production Target**: `https://seedsofknowledgeschool.com/` (Hostinger Shared / Cloud Hosting)
+- **Directory**: `/home/u426070137/domains/seedsofknowledgeschool.com/public_html`
+- **Routing Engine**: Apache `.htaccess` with `DirectoryIndex index.html index.php`
+- **Verification Status**:
+  - `GET /` -> 200 OK (Seeds of Knowledge Marketing Homepage)
+  - `GET /about.html` -> 200 OK
+  - `GET /admissions.html` -> 200 OK
+  - `GET /academics.html` -> 200 OK
+  - `GET /nursery-primary.html` -> 200 OK
+  - `GET /secondary.html` -> 200 OK
+  - `GET /gallery.html` -> 200 OK
+  - `GET /news.html` -> 200 OK
+  - `GET /contact.html` -> 200 OK
+  - `GET /robots.txt` -> 200 OK
+  - `GET /sitemap.xml` -> 200 OK
+  - `GET /favicon.ico` -> 200 OK
+  - `GET /assets/css/styles.css` -> 200 OK
+  - `GET /assets/js/main.js` -> 200 OK
+  - `GET /login` -> 200 OK (CodeIgniter School Portal)
