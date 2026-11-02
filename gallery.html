@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Gallery | Sunrise Group of Schools</title>
+  <meta name="description" content="Explore our photo gallery of Sunrise Group of Schools — bright classrooms, science and computer labs, library, sports fields, debate championships, and happy students." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </span>
+        <span>Sunrise Group of Schools</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="programme-switcher" aria-label="School Sections">
+          <a href="nursery-primary.html" class="programme-pill">Nursery &amp; Primary</a>
+          <a href="secondary.html" class="programme-pill highlighted">Secondary</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <a href="contact.html#book-tour" class="btn btn-sm btn-orange">Book a Tour</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="admissions.html" class="nav-link">Admissions</a>
+      <a href="academics.html" class="nav-link">Academics</a>
+      <a href="news.html" class="nav-link">News</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="programme-switcher">
+        <a href="nursery-primary.html" class="programme-pill">Nursery &amp; Primary</a>
+        <a href="secondary.html" class="programme-pill highlighted">Secondary</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-stacked" style="padding-bottom: 48px;">
+      <div class="container">
+        <div class="hero-stacked-top" style="margin-bottom: 0;">
+          <span class="eyebrow-pill">Campus Life in Pictures</span>
+          <h1 class="hero-title">Experience the warmth, facilities, and spirit of Sunrise</h1>
+          <p class="hero-desc" style="max-width: 660px; margin-bottom: 0;">
+            Explore moments from our classrooms, science and computing laboratories, library, sports fields, and school-wide celebrations. Click any photograph to view it in full screen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE GALLERY GRID ================= -->
+    <section class="section section-white" style="padding-top: 48px;">
+      <div class="container">
+        <div class="filter-bar" role="tablist" aria-label="Gallery Categories">
+          <button class="filter-btn active" data-filter-btn="all">All Photos (15)</button>
+          <button class="filter-btn" data-filter-btn="classrooms">Classrooms &amp; Early Years</button>
+          <button class="filter-btn" data-filter-btn="labs">Labs &amp; Library</button>
+          <button class="filter-btn" data-filter-btn="sports">Sports &amp; Arts</button>
+          <button class="filter-btn" data-filter-btn="events">Events &amp; Celebrations</button>
+        </div>
+
+        <div class="grid-3">
+          <div class="photo-card" style="cursor: pointer;" data-category="classrooms" data-lightbox-src="assets/images/hero-home.jpg" data-lightbox-title="Interactive Early Years & Primary Learning" data-lightbox-desc="Our warm, bright classrooms combine interactive digital boards with collaborative group tables.">
+            <div class="photo-card-img">
+              <img src="assets/images/hero-home.jpg" alt="Interactive Early Years & Primary Learning" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Classrooms</span>
+              <h3 class="card-title" style="font-size: 18px;">Interactive Early Years &amp; Primary Learning</h3>
+              <p class="card-text">Warm, light-filled learning spaces where curiosity and confidence thrive.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="classrooms" data-lightbox-src="assets/images/hero-academics.jpg" data-lightbox-title="Secondary Science & Inquiry Classroom" data-lightbox-desc="Students in Sunrise green uniforms engaging in hands-on science and inquiry lessons.">
+            <div class="photo-card-img">
+              <img src="assets/images/hero-academics.jpg" alt="Secondary Science & Inquiry Classroom" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Academics</span>
+              <h3 class="card-title" style="font-size: 18px;">Guided Inquiry in the Classroom</h3>
+              <p class="card-text">Small class sizes ensure personalized attention for every student.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="labs" data-lightbox-src="assets/images/academics-science-lab.jpg" data-lightbox-title="Chemistry & Biology Practical Laboratory" data-lightbox-desc="Fully equipped science laboratories supporting practical experimentation for JSS and SSS students.">
+            <div class="photo-card-img">
+              <img src="assets/images/academics-science-lab.jpg" alt="Chemistry & Biology Practical Laboratory" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Labs &amp; Library</span>
+              <h3 class="card-title" style="font-size: 18px;">Chemistry &amp; Biology Practical Lab</h3>
+              <p class="card-text">Rigorous hands-on experimentation preparing students for WAEC &amp; IGCSE practicals.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="labs" data-lightbox-src="assets/images/academics-library.jpg" data-lightbox-title="Well-Stocked Sanctuary Library" data-lightbox-desc="Over 10,000 physical volumes and digital research portals beneath a natural skylight.">
+            <div class="photo-card-img">
+              <img src="assets/images/academics-library.jpg" alt="Well-Stocked Sanctuary Library" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Labs &amp; Library</span>
+              <h3 class="card-title" style="font-size: 18px;">Well-Stocked Sanctuary Library</h3>
+              <p class="card-text">A peaceful reading and research hub with over 10,000 volumes.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="labs" data-lightbox-src="assets/images/academics-computer-lab.jpg" data-lightbox-title="Modern ICT & Coding Workstation Lab" data-lightbox-desc="High-speed workstations for coding, algorithms, digital research, and software training.">
+            <div class="photo-card-img">
+              <img src="assets/images/academics-computer-lab.jpg" alt="Modern ICT & Coding Workstation Lab" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Labs &amp; Library</span>
+              <h3 class="card-title" style="font-size: 18px;">Modern ICT &amp; Coding Lab</h3>
+              <p class="card-text">High-speed workstations supporting coding and digital literacy from Primary upwards.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="sports" data-lightbox-src="assets/images/extracurricular-football.jpg" data-lightbox-title="Competitive Football & Athletics" data-lightbox-desc="Our school football teams train and compete on lush outdoor pitches.">
+            <div class="photo-card-img">
+              <img src="assets/images/extracurricular-football.jpg" alt="Competitive Football & Athletics" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Sports &amp; Arts</span>
+              <h3 class="card-title" style="font-size: 18px;">Competitive Football &amp; Athletics</h3>
+              <p class="card-text">Building teamwork, stamina, and sportsmanship on the pitch.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="sports" data-lightbox-src="assets/images/extracurricular-debate.jpg" data-lightbox-title="Annual Debate & Public Speaking Championship" data-lightbox-desc="Students sharpening critical thinking, rhetoric, and stage confidence.">
+            <div class="photo-card-img">
+              <img src="assets/images/extracurricular-debate.jpg" alt="Annual Debate & Public Speaking Championship" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Sports &amp; Arts</span>
+              <h3 class="card-title" style="font-size: 18px;">Annual Debate Championship</h3>
+              <p class="card-text">Developing articulate, persuasive, and confident public speakers.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="sports" data-lightbox-src="assets/images/sports-basketball.jpg" data-lightbox-title="Outdoor Basketball Courts" data-lightbox-desc="Students enjoying inter-house basketball tournaments during afternoon sports.">
+            <div class="photo-card-img">
+              <img src="assets/images/sports-basketball.jpg" alt="Outdoor Basketball Courts" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Sports &amp; Arts</span>
+              <h3 class="card-title" style="font-size: 18px;">Outdoor Basketball &amp; Recreation</h3>
+              <p class="card-text">Dedicated courts supporting physical fitness and after-school sports clubs.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="classrooms" data-lightbox-src="assets/images/primary-classroom.jpg" data-lightbox-title="Primary School Collaborative Classroom" data-lightbox-desc="Engaged primary learners participating actively in daily lessons.">
+            <div class="photo-card-img">
+              <img src="assets/images/primary-classroom.jpg" alt="Primary School Collaborative Classroom" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Classrooms</span>
+              <h3 class="card-title" style="font-size: 18px;">Primary School Active Learning</h3>
+              <p class="card-text">Blending the best of Nigerian and British primary curricula.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="events" data-lightbox-src="assets/images/news-sports-day.jpg" data-lightbox-title="Inter-House Sports Day Finale" data-lightbox-desc="Houses competing in tug-of-war and relay events with energy and joy.">
+            <div class="photo-card-img">
+              <img src="assets/images/news-sports-day.jpg" alt="Inter-House Sports Day Finale" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Events</span>
+              <h3 class="card-title" style="font-size: 18px;">Inter-House Sports Day</h3>
+              <p class="card-text">A beloved annual tradition uniting students, teachers, and parents.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="events" data-lightbox-src="assets/images/news-waec-results.jpg" data-lightbox-title="WAEC Distinction Celebration" data-lightbox-desc="Graduating SSS3 students celebrating outstanding WAEC and university placement results.">
+            <div class="photo-card-img">
+              <img src="assets/images/news-waec-results.jpg" alt="WAEC Distinction Celebration" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Events</span>
+              <h3 class="card-title" style="font-size: 18px;">SSS3 Academic Celebration</h3>
+              <p class="card-text">Celebrating 95% WAEC pass rate and university scholarships.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="events classrooms" data-lightbox-src="assets/images/news-nursery-openday.jpg" data-lightbox-title="Nursery Open Day Welcome" data-lightbox-desc="Welcoming new families and toddlers to our Bright Start Early Years centre.">
+            <div class="photo-card-img">
+              <img src="assets/images/news-nursery-openday.jpg" alt="Nursery Open Day Welcome" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Events</span>
+              <h3 class="card-title" style="font-size: 18px;">Nursery Open Day</h3>
+              <p class="card-text">Families exploring our play-based Early Years classrooms.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="classrooms" data-lightbox-src="assets/images/hero-admissions.jpg" data-lightbox-title="Sunrise Ambassadors in School Uniform" data-lightbox-desc="Our students wear the Sunrise green uniform with pride, discipline, and warmth.">
+            <div class="photo-card-img">
+              <img src="assets/images/hero-admissions.jpg" alt="Sunrise Ambassadors in School Uniform" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Classrooms</span>
+              <h3 class="card-title" style="font-size: 18px;">Sunrise Student Ambassadors</h3>
+              <p class="card-text">Confident, courteous, and values-driven learners.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="events" data-lightbox-src="assets/images/admissions-scholarships.jpg" data-lightbox-title="Champions & Scholarship Recipients" data-lightbox-desc="Students celebrating academic merit and athletics trophies.">
+            <div class="photo-card-img">
+              <img src="assets/images/admissions-scholarships.jpg" alt="Champions & Scholarship Recipients" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-orange" style="align-self: flex-start; margin-bottom: 10px;">Events</span>
+              <h3 class="card-title" style="font-size: 18px;">Scholarship &amp; Honours Day</h3>
+              <p class="card-text">Recognizing excellence in academics, character, and sports.</p>
+            </div>
+          </div>
+
+          <div class="photo-card" style="cursor: pointer;" data-category="labs" data-lightbox-src="assets/images/facility-science-lab.jpg" data-lightbox-title="Advanced Innovation & Research Lab" data-lightbox-desc="Modern digital and scientific equipment for secondary research.">
+            <div class="photo-card-img">
+              <img src="assets/images/facility-science-lab.jpg" alt="Advanced Innovation & Research Lab" />
+            </div>
+            <div class="photo-card-body">
+              <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 10px;">Labs &amp; Library</span>
+              <h3 class="card-title" style="font-size: 18px;">STEM &amp; Innovation Centre</h3>
+              <p class="card-text">Equipping learners with practical scientific skills for a changing world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOK A TOUR BANNER ================= -->
+    <section class="section section-green">
+      <div class="container">
+        <div class="section-header centered" style="margin-bottom: 0; position: relative; z-index: 1;">
+          <span class="eyebrow-text light">Visit Us In Person</span>
+          <h2 class="stats-banner-title" style="margin-bottom: 16px;">
+            See our campuses with your own eyes
+          </h2>
+          <p class="stats-banner-desc" style="margin: 0 auto 28px; max-width: 540px;">
+            Book a personalized tour at any of our three Lagos campuses to experience our classrooms, laboratories, and boarding facilities firsthand.
+          </p>
+          <div class="hero-buttons" style="justify-content: center; margin-bottom: 0;">
+            <a href="contact.html#book-tour" class="btn btn-orange">Book a Campus Tour</a>
+            <a href="admissions.html" class="btn btn-outline-light">Apply for Admission</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightbox-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="modal-content" style="max-width: 860px; padding: 24px;">
+      <button class="modal-close" aria-label="Close Lightbox">&times;</button>
+      <div style="border-radius: 12px; overflow: hidden; margin-bottom: 18px; background: #111;">
+        <img id="lightbox-img" src="assets/images/hero-home.jpg" alt="Gallery full view" style="width: 100%; max-height: 68vh; object-fit: contain; margin: 0 auto;" />
+      </div>
+      <h3 id="lightbox-title" class="card-title" style="margin-bottom: 6px;">Photo Title</h3>
+      <p id="lightbox-desc" class="card-text">Photo description.</p>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+              </svg>
+            </span>
+            <span class="footer-brand-title">Sunrise Group of Schools</span>
+          </a>
+          <p class="footer-desc">
+            A values-driven school community dedicated to nurturing every child's academic, social, and emotional growth.
+          </p>
+          <div class="social-links">
+            <a href="contact.html" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="gallery.html" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="about.html" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="news.html" class="social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programmes</h4>
+          <ul class="footer-links">
+            <li><a href="nursery-primary.html#nursery">Nursery</a></li>
+            <li><a href="nursery-primary.html#primary">Primary</a></li>
+            <li><a href="secondary.html">Secondary</a></li>
+            <li><a href="academics.html#beyond-classroom">Co-Curricular</a></li>
+            <li><a href="secondary.html#boarding">Boarding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-contact-item">12 Sunrise Avenue, Lagos, Nigeria</li>
+            <li><a href="mailto:info@sunriseschools.ng">info@sunriseschools.ng</a></li>
+            <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sunrise Group of Schools. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="contact.html#privacy">Privacy Policy</a>
+          <a href="contact.html#terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News &amp; Events | Sunrise Group of Schools</title>
+  <meta name="description" content="Stay up to date with campus life, academic milestones, sports days, WAEC results, and upcoming term events at Sunrise Group of Schools." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </span>
+        <span>Sunrise Group of Schools</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="news.html" class="nav-link active">News</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="programme-switcher" aria-label="School Sections">
+          <a href="nursery-primary.html" class="programme-pill">Nursery &amp; Primary</a>
+          <a href="secondary.html" class="programme-pill highlighted">Secondary</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <a href="contact.html#book-tour" class="btn btn-sm btn-orange">Book a Tour</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="admissions.html" class="nav-link">Admissions</a>
+      <a href="academics.html" class="nav-link">Academics</a>
+      <a href="news.html" class="nav-link active">News</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="programme-switcher">
+        <a href="nursery-primary.html" class="programme-pill">Nursery &amp; Primary</a>
+        <a href="secondary.html" class="programme-pill highlighted">Secondary</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-split">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow-pill">Latest News &amp; Campus Events</span>
+            <h1 class="hero-title">Stories from across the Sunrise community</h1>
+            <p class="hero-desc">
+              Stay up to date with campus life, academic milestones, sports competitions, and the everyday moments that make Sunrise Group of Schools feel like home.
+            </p>
+            <div class="hero-buttons">
+              <a href="#all-stories" class="btn btn-orange">Browse Stories</a>
+              <a href="#upcoming-events" class="btn btn-outline">Upcoming Calendar</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img src="assets/images/news-waec-results.jpg" alt="Students celebrating strong WAEC results at Sunrise Group of Schools" />
+            <div class="floating-pill">Celebrating 95% WAEC Pass Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED & FILTERABLE NEWS ================= -->
+    <section id="all-stories" class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-text">School Journal</span>
+          <h2 class="section-title">Recent highlights &amp; announcements</h2>
+          <p class="section-subtitle">
+            Filter stories by category to explore academic achievements, early years activities, athletics, and student leadership.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="News Categories">
+          <button class="filter-btn active" data-filter-btn="all">All Stories</button>
+          <button class="filter-btn" data-filter-btn="academics">Academic Milestones</button>
+          <button class="filter-btn" data-filter-btn="sports">Sports &amp; Co-Curricular</button>
+          <button class="filter-btn" data-filter-btn="early-years">Nursery &amp; Primary</button>
+          <button class="filter-btn" data-filter-btn="community">Campus Community</button>
+        </div>
+
+        <div class="grid-3">
+          <!-- Story 1 (From Home.pdf) -->
+          <article id="sports-day" class="photo-card" data-category="sports community">
+            <div class="photo-card-img">
+              <img src="assets/images/news-sports-day.jpg" alt="Inter-House Sports Day brings the whole school together" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-green">12 Mar 2026</span>
+                <span class="badge badge-orange">Sports</span>
+              </div>
+              <h3 class="card-title">Inter-House Sports Day brings the whole school together</h3>
+              <p class="card-text">
+                Colour, energy, and teamwork filled the field as every house competed with spirit, sportsmanship, and a lot of joy. Parents, alumni, and students cheered across relay races, tug-of-war, and march-past parades.
+              </p>
+              <a href="gallery.html" class="card-link">View Event Photos <span>&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Story 2 (From Home.pdf) -->
+          <article id="waec-results" class="photo-card" data-category="academics">
+            <div class="photo-card-img">
+              <img src="assets/images/news-waec-results.jpg" alt="WAEC Results Released with strong school performance" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-orange">08 Mar 2026</span>
+                <span class="badge badge-green">Academics</span>
+              </div>
+              <h3 class="card-title">WAEC Results Released with strong school performance</h3>
+              <p class="card-text">
+                Our students and teachers celebrated another year of hard work and academic achievement across core subjects, recording a 95% pass rate and 85% distinctions in Mathematics, English, and Sciences.
+              </p>
+              <a href="academics.html" class="card-link">Explore Our Curriculum <span>&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Story 3 (From Home.pdf) -->
+          <article id="nursery-openday" class="photo-card" data-category="early-years community">
+            <div class="photo-card-img">
+              <img src="assets/images/news-nursery-openday.jpg" alt="Nursery Open Day welcomes new families to campus" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-green">02 Mar 2026</span>
+                <span class="badge badge-orange">Nursery</span>
+              </div>
+              <h3 class="card-title">Nursery Open Day welcomes new families to campus</h3>
+              <p class="card-text">
+                Prospective parents explored classrooms, met teachers, and experienced the warmth of our early years community during interactive phonics, storytelling, and sensory play demonstrations.
+              </p>
+              <a href="nursery-primary.html#nursery" class="card-link">Explore Early Years <span>&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Story 4 -->
+          <article class="photo-card" data-category="academics sports">
+            <div class="photo-card-img">
+              <img src="assets/images/extracurricular-debate.jpg" alt="Sunrise Debate Council wins Regional Inter-School Championship" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-orange">22 Feb 2026</span>
+                <span class="badge badge-green">Leadership</span>
+              </div>
+              <h3 class="card-title">Sunrise Debate Council wins Regional Inter-School Trophy</h3>
+              <p class="card-text">
+                Representing our Senior Secondary section, our Public Speaking &amp; Debate Guild took first place at the Lagos Regional Schools Debate Championship after three rounds of impromptu argumentation.
+              </p>
+              <a href="academics.html#beyond-classroom" class="card-link">See Extracurriculars <span>&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Story 5 -->
+          <article class="photo-card" data-category="academics">
+            <div class="photo-card-img">
+              <img src="assets/images/academics-science-lab.jpg" alt="Annual STEM & Robotics Exhibition showcases student innovation" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-green">14 Feb 2026</span>
+                <span class="badge badge-orange">STEM &amp; Tech</span>
+              </div>
+              <h3 class="card-title">Annual STEM &amp; Robotics Fair showcases student prototypes</h3>
+              <p class="card-text">
+                From solar-powered irrigation models built by Primary 6 pupils to automated Python weather stations coded by JSS3 and SSS2 students, our young scientists demonstrated practical innovation.
+              </p>
+              <a href="gallery.html" class="card-link">See Lab Photos <span>&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Story 6 -->
+          <article class="photo-card" data-category="community">
+            <div class="photo-card-img">
+              <img src="assets/images/admissions-scholarships.jpg" alt="Merit Scholarship Awards Ceremony honours top scholars" />
+            </div>
+            <div class="photo-card-body">
+              <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <span class="badge badge-orange">28 Jan 2026</span>
+                <span class="badge badge-green">Scholarships</span>
+              </div>
+              <h3 class="card-title">Proprietress Honours 2026 Academic &amp; Sports Scholars</h3>
+              <p class="card-text">
+                Mrs. A. Adeyemi presented merit certificates and tuition scholarships to outstanding primary and secondary learners who excelled in BECE, WAEC, and regional athletics.
+              </p>
+              <a href="admissions.html" class="card-link">Scholarship Details <span>&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= UPCOMING EVENTS CALENDAR ================= -->
+    <section id="upcoming-events" class="section section-oatmeal">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-text">School Calendar</span>
+          <h2 class="section-title">Upcoming term dates &amp; campus events</h2>
+          <p class="section-subtitle">
+            Mark your calendar for upcoming open days, parent-teacher forums, entrance assessments, and cultural celebrations.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="role-label">Nov 14, 2026 &bull; 9:00 AM</div>
+            <h3 class="card-title" style="font-size: 18px;">Campus Open House &amp; Tour</h3>
+            <p class="card-text">
+              Guided walkthrough of our Nursery, Primary, and Secondary campuses with our leadership team.
+            </p>
+            <a href="contact.html#book-tour" class="card-link">Reserve a Spot <span>&rarr;</span></a>
+          </div>
+
+          <div class="card">
+            <div class="role-label">Dec 05, 2026 &bull; 10:00 AM</div>
+            <h3 class="card-title" style="font-size: 18px;">End-of-Year Choral &amp; Drama Concert</h3>
+            <p class="card-text">
+              Performances by our Creative &amp; Performing Arts Guild in the main school auditorium.
+            </p>
+            <a href="contact.html" class="card-link">Enquire <span>&rarr;</span></a>
+          </div>
+
+          <div class="card">
+            <div class="role-label">Jan 15, 2027 &bull; All Day</div>
+            <h3 class="card-title" style="font-size: 18px;">Early Bird Admissions Deadline</h3>
+            <p class="card-text">
+              Priority slot confirmation and early enrollment deposit deadline for the new academic session.
+            </p>
+            <a href="admissions.html" class="card-link">Apply Now <span>&rarr;</span></a>
+          </div>
+
+          <div class="card">
+            <div class="role-label">Feb 20, 2027 &bull; 8:30 AM</div>
+            <h3 class="card-title" style="font-size: 18px;">Secondary Entrance Assessment</h3>
+            <p class="card-text">
+              First batch of JSS1 and transfer entrance testing in English, Mathematics, and General Science.
+            </p>
+            <a href="admissions.html" class="card-link">View Criteria <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER / CTA ================= -->
+    <section class="section section-green">
+      <div class="container">
+        <div class="stats-banner-grid">
+          <div>
+            <span class="eyebrow-text light">Stay Connected</span>
+            <h2 class="stats-banner-title">Never miss a Sunrise milestone</h2>
+            <p class="stats-banner-desc">
+              Subscribe to our termly parent &amp; community newsletter for exam updates, admission reminders, and student stories.
+            </p>
+          </div>
+
+          <div class="form-card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); padding: 28px;">
+            <form data-interactive-form>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <input type="email" class="form-control" placeholder="Enter your email address..." required style="flex: 1; min-width: 220px; background: #fff;" />
+                <button type="submit" class="btn btn-orange">Subscribe</button>
+              </div>
+              <div class="form-status-msg" style="display: none; margin-top: 12px; color: #fff; font-size: 13.5px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+              </svg>
+            </span>
+            <span class="footer-brand-title">Sunrise Group of Schools</span>
+          </a>
+          <p class="footer-desc">
+            A values-driven school community dedicated to nurturing every child's academic, social, and emotional growth.
+          </p>
+          <div class="social-links">
+            <a href="contact.html" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="gallery.html" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="about.html" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="news.html" class="social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programmes</h4>
+          <ul class="footer-links">
+            <li><a href="nursery-primary.html#nursery">Nursery</a></li>
+            <li><a href="nursery-primary.html#primary">Primary</a></li>
+            <li><a href="secondary.html">Secondary</a></li>
+            <li><a href="academics.html#beyond-classroom">Co-Curricular</a></li>
+            <li><a href="secondary.html#boarding">Boarding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-contact-item">12 Sunrise Avenue, Lagos, Nigeria</li>
+            <li><a href="mailto:info@sunriseschools.ng">info@sunriseschools.ng</a></li>
+            <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sunrise Group of Schools. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="contact.html#privacy">Privacy Policy</a>
+          <a href="contact.html#terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
