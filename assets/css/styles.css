@@ -1418,6 +1418,29 @@ textarea.form-control {
   resize: vertical;
 }
 
+.form-status-msg {
+  display: none;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-status-msg.is-visible {
+  display: block;
+}
+
+.form-status-msg.is-success {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+}
+
+.form-status-msg.is-error {
+  background-color: var(--orange-light);
+  color: #9a3b00;
+}
+
 /* Modal Overlay */
 .modal-backdrop {
   display: none;

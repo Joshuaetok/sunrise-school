@@ -119,33 +119,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Interactive Forms (Contact, Tour Booking, Online Admissions)
+  // 6. Interactive Forms (Contact, Tour Booking, Online Admissions, Newsletter)
+  // TODO: set this to the Hostinger backend endpoint once it's ready, e.g.
+  // 'https://seedsofknowledgeschool.com/api/form-submit.php'. Until then every
+  // form below shows an honest "not connected yet" message instead of a fake
+  // success message, so no visitor is told their submission went through
+  // when it didn't.
+  const FORM_ENDPOINT = '';
+
+  const FORM_MESSAGES = {
+    contact: {
+      success:
+        '<strong>Thank you!</strong> Your submission has been received by the Seeds of Knowledge Intl School Admissions &amp; Administration team. We will contact you within 24 hours.',
+    },
+    admission: {
+      success:
+        '<strong>Application received!</strong> Our Admissions Office will contact you with your assessment schedule and form reference number shortly.',
+    },
+    newsletter: {
+      success: '<strong>Subscribed!</strong> Watch your inbox for our next newsletter.',
+    },
+  };
+  const DEFAULT_MESSAGES = {
+    success: '<strong>Thank you!</strong> Your submission has been received.',
+  };
+  const NOT_CONNECTED_MSG =
+    '<strong>This form isn’t connected yet.</strong> Your message was not sent — please reach us directly by phone or email for now.';
+  const ERROR_MSG =
+    '<strong>Something went wrong.</strong> Please try again, or reach us directly by phone or email.';
+
   const interactiveForms = document.querySelectorAll('form[data-interactive-form]');
   interactiveForms.forEach((form) => {
-    form.addEventListener('submit', (e) => {
+    const formType = form.getAttribute('data-interactive-form') || 'contact';
+    const messages = FORM_MESSAGES[formType] || DEFAULT_MESSAGES;
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const statusBox = form.querySelector('.form-status-msg');
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn ? submitBtn.textContent : 'Submit';
+
+      const showStatus = (html, isError) => {
+        if (!statusBox) return;
+        statusBox.classList.add('is-visible');
+        statusBox.classList.toggle('is-error', isError);
+        statusBox.classList.toggle('is-success', !isError);
+        statusBox.innerHTML = html;
+        statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      };
+
+      if (!FORM_ENDPOINT) {
+        showStatus(NOT_CONNECTED_MSG, true);
+        return;
+      }
 
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting...';
       }
 
-      setTimeout(() => {
-        if (statusBox) {
-          statusBox.style.display = 'block';
-          statusBox.innerHTML =
-            '<strong>Thank you!</strong> Your submission has been received by the Seeds of Knowledge Intl School Admissions & Administration team. We will contact you within 24 hours.';
-          statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+      try {
+        const formData = new FormData(form);
+        formData.set('form_type', formType);
+        formData.set('source_page', window.location.pathname);
+
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: formData,
+        });
+
+        if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+
+        showStatus(messages.success, false);
         form.reset();
+      } catch (err) {
+        showStatus(ERROR_MSG, true);
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
         }
-      }, 450);
+      }
     });
   });
 });

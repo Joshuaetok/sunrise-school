@@ -287,12 +287,12 @@
           </div>
 
           <div class="form-card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); padding: 28px;">
-            <form data-interactive-form>
+            <form data-interactive-form="newsletter">
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <input type="email" class="form-control" placeholder="Enter your email address..." required style="flex: 1; min-width: 220px; background: #fff;" />
+                <input name="email" type="email" class="form-control" placeholder="Enter your email address..." required style="flex: 1; min-width: 220px; background: #fff;" />
                 <button type="submit" class="btn btn-orange">Subscribe</button>
               </div>
-              <div class="form-status-msg" style="display: none; margin-top: 12px; color: #fff; font-size: 13.5px;"></div>
+              <div class="form-status-msg" role="status" aria-live="polite" style="margin-top: 12px;"></div>
             </form>
           </div>
         </div>

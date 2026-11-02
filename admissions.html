@@ -538,19 +538,19 @@
         Complete your child's preliminary application below. Our Admissions Office will contact you with your assessment schedule and form reference number.
       </p>
 
-      <form data-interactive-form>
+      <form data-interactive-form="admission">
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" for="student-name">Child's Full Name *</label>
-            <input id="student-name" type="text" class="form-control" placeholder="e.g. Chidinma Okafor" required />
+            <input id="student-name" name="student_name" type="text" class="form-control" placeholder="e.g. Chidinma Okafor" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="student-dob">Date of Birth *</label>
-            <input id="student-dob" type="date" class="form-control" required />
+            <input id="student-dob" name="student_dob" type="date" class="form-control" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="programme-level">Programme Applying For *</label>
-            <select id="programme-level" class="form-control" required>
+            <select id="programme-level" name="programme_level" class="form-control" required>
               <option value="">Select Programme...</option>
               <option value="nursery">Nursery &amp; Early Years (Ages 1-5)</option>
               <option value="primary">Primary School (Basic 1-6 / Ages 6-11)</option>
@@ -560,7 +560,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="campus-choice">Preferred Campus *</label>
-            <select id="campus-choice" class="form-control" required>
+            <select id="campus-choice" name="campus_choice" class="form-control" required>
               <option value="mainland">Lagos Mainland Flagship (12 Sunrise Ave)</option>
               <option value="lekki">Victoria Island / Lekki Annex</option>
               <option value="ikeja">Ikeja Early Years &amp; Primary Campus</option>
@@ -568,23 +568,23 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="parent-name">Parent / Guardian Name *</label>
-            <input id="parent-name" type="text" class="form-control" placeholder="e.g. Mr. & Mrs. Okafor" required />
+            <input id="parent-name" name="parent_name" type="text" class="form-control" placeholder="e.g. Mr. & Mrs. Okafor" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="parent-phone">Phone Number *</label>
-            <input id="parent-phone" type="tel" class="form-control" placeholder="+234 800 000 0000" required />
+            <input id="parent-phone" name="parent_phone" type="tel" class="form-control" placeholder="+234 800 000 0000" required />
           </div>
           <div class="form-group full">
             <label class="form-label" for="parent-email">Email Address *</label>
-            <input id="parent-email" type="email" class="form-control" placeholder="parent@example.com" required />
+            <input id="parent-email" name="parent_email" type="email" class="form-control" placeholder="parent@example.com" required />
           </div>
           <div class="form-group full">
             <label class="form-label" for="parent-notes">Additional Information (Boarding, Scholarships, Sibling Discount)</label>
-            <textarea id="parent-notes" class="form-control" placeholder="Let us know any questions or special requirements..."></textarea>
+            <textarea id="parent-notes" name="parent_notes" class="form-control" placeholder="Let us know any questions or special requirements..."></textarea>
           </div>
         </div>
 
-        <div class="form-status-msg info-box-green" style="display: none; padding: 16px 20px; margin-bottom: 16px; font-size: 14px; color: var(--green-primary);"></div>
+        <div class="form-status-msg" role="status" aria-live="polite"></div>
 
         <button type="submit" class="btn btn-orange" style="width: 100%;">Submit Application Request</button>
       </form>

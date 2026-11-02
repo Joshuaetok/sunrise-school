@@ -145,7 +145,7 @@
             <h3 class="card-title" style="font-size: 24px; margin-bottom: 6px;">Schedule a Visit / Inquiry Form</h3>
             <p class="card-text" style="margin-bottom: 22px;">Select your inquiry type and preferred date below.</p>
 
-            <form data-interactive-form>
+            <form data-interactive-form="contact">
               <div class="form-grid">
                 <div class="form-group">
                   <label class="form-label" for="contact-name">Full Name *</label>
@@ -187,7 +187,7 @@
                 </div>
               </div>
 
-              <div class="form-status-msg info-box-green" style="display: none; padding: 16px 20px; margin-bottom: 16px; font-size: 14px; color: var(--green-primary);"></div>
+              <div class="form-status-msg" role="status" aria-live="polite"></div>
 
               <button type="submit" class="btn btn-orange" style="width: 100%;">Send Request</button>
             </form>
