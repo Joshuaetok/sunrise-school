@@ -1,0 +1,12 @@
+DirectoryIndex index.html index.php
+
+RewriteEngine on
+
+# Force HTTPS Redirection
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# CodeIgniter Portal Fallback
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php?/$0 [PT,L]
