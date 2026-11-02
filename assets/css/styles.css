@@ -37,10 +37,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   max-width: 100%;
+}
+
+[id] {
+  scroll-margin-top: 90px;
 }
 
 body {
@@ -808,6 +813,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
@@ -1340,6 +1347,8 @@ ul {
 }
 
 .form-control {
+  width: 100%;
+  display: block;
   padding: 12px 16px;
   border-radius: 10px;
   border: 1px solid var(--border-warm);

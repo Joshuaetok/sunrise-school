@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
           statusBox.style.display = 'block';
           statusBox.innerHTML =
             '<strong>Thank you!</strong> Your submission has been received by the Seeds of Knowledge Intl School Admissions & Administration team. We will contact you within 24 hours.';
+          statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         form.reset();
         if (submitBtn) {
