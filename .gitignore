@@ -4,3 +4,9 @@ screenshots/
 site-deploy.zip
 core
 *.log
+ssl_certs/
+*.key
+*.cer
+*.crt
+*.csr
+
