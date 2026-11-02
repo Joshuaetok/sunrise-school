@@ -119,6 +119,7 @@ ul {
   font-size: 16.5px;
   color: var(--green-primary);
   letter-spacing: -0.02em;
+  line-height: 1.2;
   flex-shrink: 0;
 }
 
@@ -152,6 +153,7 @@ ul {
   color: var(--text-dark);
   padding: 6px 0;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -174,8 +176,9 @@ ul {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .programme-switcher {
@@ -214,10 +217,11 @@ ul {
   border-radius: 10px;
   background-color: var(--green-light);
   color: var(--green-primary);
-  border: none;
+  border: 1px solid rgba(27, 94, 32, 0.12);
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  flex-shrink: 0;
   transition: var(--transition);
 }
 
@@ -228,16 +232,18 @@ ul {
 .mobile-drawer {
   display: none;
   position: fixed;
-  top: 64px;
+  top: 68px;
   left: 0;
   right: 0;
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
   background-color: var(--bg-cream);
   border-bottom: 1px solid var(--border-warm);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  padding: 20px 24px 24px;
   z-index: 999;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .mobile-drawer.open {
@@ -245,9 +251,9 @@ ul {
 }
 
 .mobile-drawer .nav-link {
-  font-size: 16px;
-  padding: 10px 12px;
-  border-radius: 8px;
+  font-size: 15.5px;
+  padding: 10px 14px;
+  border-radius: 10px;
 }
 
 .mobile-drawer .nav-link.active {
@@ -261,36 +267,103 @@ ul {
 .mobile-drawer .programme-switcher {
   width: 100%;
   justify-content: center;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .mobile-drawer .programme-pill {
   flex: 1;
   text-align: center;
-  padding: 8px 12px;
+  padding: 9px 12px;
 }
 
-@media (max-width: 1120px) {
-  .main-nav,
+/* Hide pill switcher first on medium laptops/tablets so nav + Apply Now never crowd */
+@media (max-width: 1260px) {
+  .header-inner {
+    padding: 0 28px;
+    gap: 16px;
+  }
   .header-actions .programme-switcher {
+    display: none;
+  }
+  .main-nav {
+    gap: 16px;
+  }
+}
+
+/* Tablet & Mobile Navigation (Apply Now inside, Hamburger icon at extreme right) */
+@media (max-width: 1024px) {
+  .main-nav {
     display: none;
   }
   .mobile-menu-toggle {
     display: inline-flex;
   }
   .site-header {
-    height: 64px;
+    height: 68px;
   }
   .header-inner {
     padding: 0 20px;
+    gap: 12px;
   }
   .brand-logo {
-    font-size: 15px;
+    font-size: 15.5px;
+    gap: 9px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .brand-logo span:last-child {
+    display: block;
+    overflow-wrap: break-word;
+  }
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .header-actions {
+    gap: 10px;
+    flex-shrink: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    height: 64px;
+  }
+  .mobile-drawer {
+    top: 64px;
+    max-height: calc(100vh - 64px);
+    padding: 16px 18px 20px;
+  }
+  .header-inner {
+    padding: 0 14px;
+    gap: 8px;
+  }
+  .brand-logo {
+    font-size: 13.5px;
+    line-height: 1.18;
     gap: 8px;
   }
   .brand-icon {
     width: 32px;
     height: 32px;
+    border-radius: 8px;
+  }
+  .brand-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .header-actions .btn-sm {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
   }
 }
 
