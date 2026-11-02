@@ -15,6 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Close mobile drawer when any navigation link inside it is clicked
+    mobileDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close drawer or active modal on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        mobileDrawer.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('.modal-backdrop.open').forEach((m) => {
+          m.classList.remove('open');
+        });
+      }
+    });
   }
 
   // 2. FAQ Cards Interactive Toggle
