@@ -5,6 +5,8 @@ site-deploy.zip
 core
 *.log
 ssl_certs/
+SSL_KEYS_COPY_PASTE.txt
+ssl_certificates.zip
 *.key
 *.cer
 *.crt
