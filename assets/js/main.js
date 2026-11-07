@@ -120,12 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Interactive Forms (Contact, Tour Booking, Online Admissions, Newsletter)
-  // TODO: set this to the Hostinger backend endpoint once it's ready, e.g.
-  // 'https://seedsofknowledgeschool.com/api/form-submit.php'. Until then every
-  // form below shows an honest "not connected yet" message instead of a fake
-  // success message, so no visitor is told their submission went through
-  // when it didn't.
-  const FORM_ENDPOINT = '';
+  // Connected directly to CodeIgniter backend at /inquiry/submit
+  const FORM_ENDPOINT = '/inquiry/submit';
 
   const FORM_MESSAGES = {
     contact: {
@@ -189,12 +185,18 @@ document.addEventListener('DOMContentLoaded', () => {
           body: formData,
         });
 
-        if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+        const data = await response.json().catch(() => null);
 
-        showStatus(messages.success, false);
+        if (!response.ok) {
+          const errDetail = data && data.message ? data.message : 'Please check your inputs and try again.';
+          throw new Error(errDetail);
+        }
+
+        const successText = data && data.message ? `<strong>Thank you!</strong> ${data.message}` : messages.success;
+        showStatus(successText, false);
         form.reset();
       } catch (err) {
-        showStatus(ERROR_MSG, true);
+        showStatus(`<strong>Unable to submit:</strong> ${err.message || ERROR_MSG}`, true);
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
